@@ -1,0 +1,185 @@
+/* *{
+    border: dashed 1px red;
+} */
+
+html{
+    font-family: 'Poppins', sans-serif;
+    color:#0e2231;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin:0;
+}
+
+a{
+    font-weight: 500;
+    color:#0e2231;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#0e2231;
+    font-weight: 400;
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin:0
+}
+
+nav ul li a{
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #ceab5d;
+}
+
+body{
+    margin:0;
+    background-color: #F9F7F5;
+    
+}
+
+input{
+    padding: 10px;
+    background-color: #F9F7F5;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background-color: #0e2231;
+    color: #F9F7F5;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border: 2px solid #0e2231;
+    border-radius: 10px;
+}
+
+button:hover{
+    color: #ceab5d;
+}
+
+button:active{
+    color: #F9F7F5;
+    box-shadow: 0 5px 15px rgba(206, 171, 93, .7);
+}
+
+.currentRoute{
+    color:#ceab5d;
+}
+
+.subWrapper{
+    margin: 6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subWrapper h1{
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.subWrapper h2{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(110, 110, 110);
+}
+
+.subWrapper input{
+    width: 250px;
+}
+
+.subWrapper button{
+    width: 120px;
+}
+
+.singleInputWrapper{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    border: 2px solid rgb(110, 110, 110);
+    border-radius: 10px;
+}
+
+.recentPosts h2{
+    font-size: 20px;
+}
+
+.featuredWrapper{
+    margin-top: 2rem;
+    display: flex;
+    gap:3rem;
+}
+
+.featuredWrapper .singlePost{
+    display: flex;
+}
+
+.featuredPost{
+    flex:1
+}
+
+.postsColumn{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.postsColumn .singlePost{
+    gap:1.5rem
+}
+
+.desc h4{
+    font-weight: 500;
+    font-size: 14px;
+    color:rgb(110, 110, 110)
+}
+
+.desc h3{
+    font-size: 25px;
+}
+
+.desc p{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.tags{
+    display: flex;
+    gap:10px
+}
+
+.tags h5{
+    font-weight: 500;
+    text-align: center;
+    min-width: 75px;
+    color:rgb(110, 110, 110);
+    border: 2px solid rgb(110, 110, 110);
+    padding: 3px;
+    border-radius: 50px;
+}
