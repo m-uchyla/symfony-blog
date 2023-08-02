@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         {% block stylesheets %}
         {% endblock %}
 
@@ -11,6 +16,20 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav>
+            <h1>N4U</h1>
+            <ul>
+                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'homepage' ? 'currentRoute' : '' }}">Wszystkie</a></li>
+                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'business' ? 'currentRoute' : '' }}">Biznes</a></li>
+                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'politics' ? 'currentRoute' : '' }}">Polityka</a></li>
+                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'tech' ? 'currentRoute' : '' }}">Technologia</a></li>
+                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'world' ? 'currentRoute' : '' }}">Świat</a></li>
+                <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Kontakt</a></li>
+                <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Login</a></li>
+            </ul>
+        </nav>
+        <main style="margin-left:10rem;margin-right:10rem">
+            {% block body %}{% endblock %}
+        </main>
     </body>
 </html>
