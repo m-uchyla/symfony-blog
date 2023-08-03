@@ -17,6 +17,7 @@ a{
 }
 
 nav{
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,4 +183,30 @@ button:active{
     border: 2px solid rgb(110, 110, 110);
     padding: 3px;
     border-radius: 50px;
+}
+
+.sticky {
+    background-color: #0e2231;
+    color:#F9F7F5;
+    position: sticky;
+    top: 0;
+  }
+
+.sticky a{
+    color:#F9F7F5;
+    font-weight: 400;
+}
+
+.sticky a:hover{
+    color:#0e2231;
+    background-color: #ceab5d;
+}
+
+.sticky a:active{
+    color:#ceab5d;
+    background-color: #0e2231;
+}
+
+.sticky .currentRoute{
+    color:#ceab5d;
 }

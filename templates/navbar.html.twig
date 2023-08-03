@@ -1,0 +1,12 @@
+<nav id="navbar">
+    <h1>N4U</h1>
+    <ul>
+        <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'homepage' ? 'currentRoute' : '' }}">Wszystkie</a></li>
+        <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'business' ? 'currentRoute' : '' }}">Biznes</a></li>
+        <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'politics' ? 'currentRoute' : '' }}">Polityka</a></li>
+        <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'tech' ? 'currentRoute' : '' }}">Technologia</a></li>
+        <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'world' ? 'currentRoute' : '' }}">Świat</a></li>
+        <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Kontakt</a></li>
+        <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Login</a></li>
+    </ul> 
+</nav>

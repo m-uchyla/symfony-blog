@@ -16,20 +16,27 @@
         {% endblock %}
     </head>
     <body>
-        <nav>
-            <h1>N4U</h1>
-            <ul>
-                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'homepage' ? 'currentRoute' : '' }}">Wszystkie</a></li>
-                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'business' ? 'currentRoute' : '' }}">Biznes</a></li>
-                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'politics' ? 'currentRoute' : '' }}">Polityka</a></li>
-                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'tech' ? 'currentRoute' : '' }}">Technologia</a></li>
-                <li><a href="{{path('homepage')}}" class="{{ app.request.get('_route') == 'world' ? 'currentRoute' : '' }}">Świat</a></li>
-                <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Kontakt</a></li>
-                <li><a href="{{path('post')}}" class="{{ app.request.get('_route') == 'post' ? 'currentRoute' : '' }}">Login</a></li>
-            </ul>
-        </nav>
+        {{ include('navbar.html.twig') }}
         <main style="margin-left:10rem;margin-right:10rem">
             {% block body %}{% endblock %}
         </main>
+
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {stickyNav()};
+
+            // Get the navbar
+            var navbar = document.getElementById("navbar");
+
+
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function stickyNav() {
+                if (window.pageYOffset >= 300) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
     </body>
 </html>
