@@ -172,17 +172,30 @@ button:active{
 
 .tags{
     display: flex;
-    gap:10px
+    gap:5px
 }
 
-.tags h5{
+.tags a{
+    font-size: 12px;
     font-weight: 500;
     text-align: center;
-    min-width: 75px;
+    min-width: 70px;
     color:rgb(110, 110, 110);
     border: 2px solid rgb(110, 110, 110);
-    padding: 3px;
+    padding: 2px;
     border-radius: 50px;
+}
+
+.tags a:hover{
+    color: #0e2231;
+    border: 2px solid #0e2231;
+    cursor: pointer;
+}
+
+.tags a:active{
+    color: #ceab5d;
+    border: 2px solid #ceab5d;
+    cursor: pointer;
 }
 
 .sticky {
@@ -209,4 +222,64 @@ button:active{
 
 .sticky .currentRoute{
     color:#ceab5d;
+}
+
+.popularPosts{
+    display: grid;
+    grid-template-columns: 475px 475px 475px;
+    justify-content: space-between;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.popularWrapper{
+    margin-top:5rem;
+    margin-bottom: 5rem;
+}
+
+.popularWrapper h2{
+    font-size: 20px;
+    
+}
+
+.loginWrapper{
+    margin: auto;
+    margin-top:5rem;
+    width: 25%;
+    text-align:center;
+    padding: 5rem;
+    border-radius: 20px;
+}
+
+.loginWrapper h1{
+    margin-bottom: 1.5rem;
+}
+
+.loginWrapper form{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginWrapper input{
+    border: 2px solid rgb(110, 110, 110);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.loginWrapper input:focus{
+    border: 2px solid #0e2231;
+    border-radius: 10px;
+}
+
+.alert-danger{
+    font-size: 12px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: rgb(175, 0, 0);
+    width: 50%;
+    border-radius: 10px;
 }
