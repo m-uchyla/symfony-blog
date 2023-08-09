@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="loginWrapper">
-    <h1>Register</h1>
+    <h1>Rejestracja</h1>
 
     {{ form_errors(registrationForm) }}
 
@@ -16,7 +16,10 @@
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">Zarejestruj</button>
     {{ form_end(registrationForm) }}
+    <div class="securityNav">
+        <a href="{{path('app_login')}}">Logowanie</a>
+    </div>
 </div>
 {% endblock %}

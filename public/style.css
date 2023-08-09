@@ -273,6 +273,10 @@ button:active{
     border-radius: 10px;
 }
 
+.loginWrapper .securityNav{
+    margin-top:0.5rem;
+}
+
 .alert-danger{
     font-size: 12px;
     margin: auto;

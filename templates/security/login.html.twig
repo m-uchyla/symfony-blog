@@ -19,6 +19,10 @@
             Zaloguj
         </button>
     </form>
+    <div class="securityNav">
+        <a href="{{path('app_register')}}">Rejestracja</a>
+    </div>
+    
     {% if error %}
         <div class="alert alert-danger">Error: {{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -28,5 +32,6 @@
             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
+    
 </div>
 {% endblock %}
