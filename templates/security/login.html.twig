@@ -4,13 +4,14 @@
 
 {% block body %}
 <div class="loginWrapper">
-    <form method="post">
+    <form action="{{ path('app_login') }}" method="post">
         
 
         <h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
-        <input type="email" placeholder="Wprowadź adres email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-        <input type="password" placeholder="Podaj hasło" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
+        {# <input type="text" placeholder="Wprowadź adres email" value="{{ last_username }}" name="_username" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+        <input type="password" placeholder="Podaj hasło" name="_password" id="inputPassword" class="form-control" autocomplete="current-password" required> #}
+        <input type="text" id="username" name="_username" value="{{ last_username }}">
+        <input type="password" id="password" name="_password">
         <input type="hidden" name="_csrf_token"
             value="{{ csrf_token('authenticate') }}"
         >
